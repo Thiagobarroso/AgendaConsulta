@@ -25,7 +25,7 @@ router.post('/', async (req, res) => {
 });
 
 //ATUALIZAR REGISTRO
-router.put('/:id', async (req, res) => {
+router.put('/especialidade', async (req, res) => {
   try {
     const id = req.params.id;
     const novaEspecialidade = req.body;
