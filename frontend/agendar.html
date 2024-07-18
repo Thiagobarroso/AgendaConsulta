@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Consulta</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/src/favicon.svg" type="image/x-icon">
+
+
+    <!-- Estilos Globais -->
+    <link rel="stylesheet" href="./estilo/global.css">
+
+    <!--Estilos Especificos-->
+    <link rel="stylesheet" href="./estilo/header.css">
+    <link rel="stylesheet" href="./estilo/agendar.css">
+
+</head>
+
+<body>
+
+    <!--HEADER-->
+    <header>
+        <div>
+            <h1>LOGO</h1>
+        </div>
+
+        <div>
+        </div>
+
+        <div>
+            <a class="btn-principal" href="#">Menu <i class="ph ph-list"></i></a>
+        </div>
+    </header>
+
+    <!--AGENDAR CONSULTA - ETAPA 1-->
+
+    <main class="main-container  selecionarEspecialidade">
+        <section class="especialista">
+            <div class="container-agendar">
+                <h2>Agendar Consulta</h2>
+
+                <div class="linha-tempo">
+                </div>
+
+                <h3>Selecionar a especialidade</h3>
+
+                <div class="selecionar">
+                    <label for="especialista">Especialista</label>
+                    <select name="especialista" id="especialista" class="input">
+                        <option value="Clínico Médico Geral">Clínico Médico Geral</option>
+                        <option value="Pediatra">Pediatra</option>
+                        <option value="Angiologista">Angiologista</option>
+                        <option value="Ortopedista">Ortopedista</option>
+                        <option value="Endocrinogista">Endocrinogista</option>
+                    </select>
+                </div>
+
+                <div class="selecionar">
+                    <label for="doutor">Doutor</label>
+                    <select name="doutor" id="doutor" class="input">
+                        <option value="sem preferencia">Sem Preferência</option>
+                        <option value="Dra. Fatima Gaio">Dra. Fatima Gaio</option>
+                        <option value="Dr. Pedro">Dr. Pedro</option>
+                        <option value="Dra. Andressa Paula">Dra. Andressa Paula</option>
+                        <option value="Dr. Bernardo Cruz">Dr. Bernardo Cruz</option>
+                        <option value="Dr. Antônio Paulo">Dr. Antônio Paulo</option>
+                    </select>
+                </div>
+
+                <div class="politica">
+                    <p>Ao enviar este formulário você concorda com nossa política de privacidade</p>
+                </div>
+
+
+
+                <div class="botoes">
+                    <div>
+                        <a href="#"></a>
+                    </div>
+
+                    <div class="btn-verde proximoEspecialidade">
+                        <a class="btn-principal" href="#">Proximo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <!--SELECIONAR DATA - ETAPA2    -->
+
+    <main class="main-container  selecionarData">
+        <section class="especialista">
+            <div class="container-agendar">
+                <h2>Agendar Consulta</h2>
+
+                <h3>Selecione a data </h3>
+
+                <div class="politica">
+                    <p>abaixo você pode encontrar uma lista de horários disponíveis para Dra. Fátima. clique em um horário para prosseguir com a reserva</p>
+                </div>
+
+                <div class="selecionar">
+                    <label for="date">Selecionar data</label>
+                    <input class="input" type="date">
+
+                    <label for="hora">Selecionar horário</label>
+                    <input class="input" type="time">
+                </div>
+
+                <div class="botoes">
+                    <div class="btn-branco voltarData">
+                        <a href="#">Voltar</a>
+                    </div>
+
+                    <div class="btn-verde proximoData">
+                        <a href="#">Proximo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <!--Datalhes - ETAPA 3-->
+
+    <main class="main-container  detalhes">
+        <section class="especialista">
+            <div class="container-agendar">
+                <h2>Agendar Consulta</h2>
+
+                <h3>Detalhes</h3>
+
+                <div class="politica">
+                    <p>Você selecionou o agendatamento para [especilidade] com a [nome do doutor]no [dia], no horário [horário], preecha o formulário para continuar com o agendamento</p>
+                </div>
+
+                <div class="selecionar">
+                    <label for="nome">Nome completo</label>
+                    <input class="input" type="text" name="nome" placeholder="seu nome completo">
+
+                    <label for="numero">Telefone para contato</label>
+                    <input class="input" type="number" name="numero" placeholder="Ex: 21966154418">
+
+                    <label for="email">Telefone para contato</label>
+                    <input class="input" type="email" name="email" placeholder="Ex: seuemail@seuemail.com.br">
+                </div>
+
+                <div class="botoes">
+                    <div class="btn-branco voltarDetalhe">
+                        <a href="#">Voltar</a>
+                    </div>
+
+                    <div class="btn-verde proximoDetalhe">
+                        <a href="#">Proximo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!--AGENDAMENTO CONFIRMADO - ETAPA 4-->
+
+
+    <main class="main-container  confirmarAgendamento">
+        <section class="especialista">
+            <div class="container-agendar">
+
+                <h1>Agendamento Confirmado! <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#4ec20f">
+                        <path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
+                    </svg></h1>
+
+                <div class="politica">
+                    <p>Você selecionou o agendatamento para [especilidade] com a [nome do doutor]no [dia], no horário [horário], preecha o formulário para continuar com o agendamento</p>
+                </div>
+
+                <div class="selecionar">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" name="nome" placeholder="seu nome completo">
+
+                    <label for="numero">Telefone para contato</label>
+                    <input type="number" name="numero" placeholder="Ex: 21966154418">
+
+                    <label for="email">Telefone para contato</label>
+                    <input type="email" name="email" placeholder="Ex: seuemail@seuemail.com.br">
+                </div>
+
+                <div class="botoes">
+                    <div class="btn-verde inicio">
+                        <a href="#">Voltar para o inicio</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!--Script-->
+    <script src="./js/agendar.js"></script>
+
+</body>
+
+</html>

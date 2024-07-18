@@ -1,33 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*FONTE */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+/*IMPORT PAGES*/
+@import url(/frontend/estilo/header.css);
+
+:root {
+    --azul-principal: #0452CE;
+    --azul-secundario: #1D63D3;
+
+    --cinza-principal: #555;
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins';
     list-style: none;
+    font-family: "Roboto";
 }
 
-:root {
-   --cor-primaria: #1E4854;
-   --branco: #fff;
-}
-
-a {
+.btn-principal{
+    background-color: var(--azul-principal);
+    color: white;
     text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
 
-
-.input {
-    height: 40px;
-    border-radius: 4px;
-    border: 1px solid #788392;
-    color: #788392;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.input:focus {
-    outline: none;
+.btn-principal:hover{
+    background-color: var(--azul-secundario);
+    transition: background-color 0.3s ease;
 }

@@ -1,53 +1,24 @@
-Header {
+header {
+    margin: 1.25rem 0rem 1.25rem 0rem;
     display: flex;
-    max-width: 100%;
-    height: 3.75rem;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;   
     align-items: center;
-    color: var(--branco);
-    background-color: var(--cor-primaria);
 }
 
-.logo {
- margin-left: 50px;
-}
-
-.logo h1 {
-    font-size: 2rem;
-}
-
-span {
- font-weight: 300;
-}
-
-.menu {
-    justify-content: center;
-    margin-right: 50px;
-}
-
-.menu a {
-    text-decoration: none;
-    color: var(--branco);
-    border: 1px solid var(--branco);
-    padding: 5px 15px;
-    border-radius: 50px;
+nav ul {
     display: flex;
+    color: var(--cinza-principal);
 }
 
-.menu svg {
-    margin-left: 10px;
+nav ul li{
+    font-weight: 500;
+    margin: 0.625rem;
+    cursor: pointer;
 }
 
-
-/* BACKGROUND */
-
-body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                      url(../src/background.avif);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
+nav ul li:hover{
+    color: var(--azul-principal);
+    transition: color 0.3s ease;
 }
+
 

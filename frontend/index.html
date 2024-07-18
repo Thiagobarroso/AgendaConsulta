@@ -1,211 +1,137 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agendar Consulta</title>
+    <title>Consultório</title>
 
-    <!-- Favicon -->
-    <link rel="icon" href="/src/favicon.svg" type="image/x-icon">
-
-
-    <!-- Estilos Globais -->
-    <link rel="stylesheet" href="./estilo/global.css">
-
-    <!--Estilos Especificos-->
-    <link rel="stylesheet" href="./estilo/header.css">
-    <link rel="stylesheet" href="./estilo/section.css">
-
+    <!--Estilo-->
+    <link rel="stylesheet" href="/frontend/estilo/index.css">
+    <link rel="stylesheet" href="/frontend/estilo/global.css">
+    <link rel="stylesheet" href="/frontend/estilo/header.css">
 </head>
 
 <body>
-
-    <!--HEADER-->
     <header>
-        <div class="logo">
-            <h1>
-                <span>Agendar</span>Consulta
-            </h1>
+        <div>
+            <h1>Logo</h1>
         </div>
-
-        <div class="menu">
-            <a href="#"> Menu
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
-                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
-                </svg>
-            </a>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Médicos</li>
+                <li>Especialidades</li>
+                <li>Sobre Nós</li>
+                <li>Contato</li>
+            </ul>
+        </nav>
+        <div>
+            <a class="btn-principal" href="/frontend/agendar.html">Agendar Consulta</a>
         </div>
     </header>
 
-    <!--AGENDAR CONSULTA - ETAPA 1-->
+    <main>
+        <section class="home">
+            <div class="container-info">
+                <h1>Book Your Doctor</br>
+                    Appointment</br>
+                    Online. </h1>
 
-    <main class="main-container  selecionarEspecialidade">
-        <section class="especialista">
-            <div class="container-agendar">
-                <h2>Agendar Consulta</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim omnis repellendus ut animi impedit totam quia</p>
 
-                <div class="linha-tempo">
-                </div>
-
-                <h3>Selecionar a especialidade</h3>
-
-                <div class="selecionar">
-                    <label for="especialista">Especialista</label>
-                    <select name="especialista" id="especialista" class="input">
-                        <option value="Clínico Médico Geral">Clínico Médico Geral</option>
-                        <option value="Pediatra">Pediatra</option>
-                        <option value="Angiologista">Angiologista</option>
-                        <option value="Ortopedista">Ortopedista</option>
-                        <option value="Endocrinogista">Endocrinogista</option>
-                    </select>
-                </div>
-
-                <div class="selecionar">
-                    <label for="doutor">Doutor</label>
-                    <select name="doutor" id="doutor" class="input">
-                        <option value="sem preferencia">Sem Preferência</option>
-                        <option value="Dra. Fatima Gaio">Dra. Fatima Gaio</option>
-                        <option value="Dr. Pedro">Dr. Pedro</option>
-                        <option value="Dra. Andressa Paula">Dra. Andressa Paula</option>
-                        <option value="Dr. Bernardo Cruz">Dr. Bernardo Cruz</option>
-                        <option value="Dr. Antônio Paulo">Dr. Antônio Paulo</option>
-                    </select>
-                </div>
-
-                <div class="politica">
-                    <p>Ao enviar este formulário você concorda com nossa política de privacidade</p>
-                </div>
-
-
-
-                <div class="botoes">
+                <div class="btn-info">
                     <div>
-                        <a href="#"></a>
+                        <a class="btn-agendar" href="#">Book An Appointment</a>
                     </div>
+                    <div>
+                        <a class="btn-ligar" href="#">Call now <i class="ph ph-phone"></i></a>
+                    </div>
+                </div>
 
-                    <div class="btn-verde proximoEspecialidade">
-                        <a href="#">Proximo</a>
-                    </div>
+            </div>
+
+
+            <div class="container-img-doctor">
+                <img class="image-doctor" src="/frontend/assets/imagens/doctor-image.png" alt="desenho de um doutor">
+            </div>
+        </section>
+
+
+        <section class="pesquisar">
+            <div class="pesquisar-consulta">
+                <div>
+                    <select name="" id="">
+                        <option value="doutor">Dr.Thiago</option>
+                        <option value="doutor">Dr.Jorge</option>
+                        <option value="doutor">Dr.Andressa</option>
+                        <option value="doutor">Dr.Sueli</option>
+                        <option value="doutor">Dr.Bernardo</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="#">Pesquisa especilidade</label>
+                    <input type="text">
+                </div>
+
+                <div>
+                    <a href="#" class="btn-principal">Pesquisar</a>
                 </div>
             </div>
         </section>
-    </main>
 
-
-
-    <!--SELECIONAR DATA - ETAPA2    -->
-
-    <main class="main-container  selecionarData">
-        <section class="especialista">
-            <div class="container-agendar">
-                <h2>Agendar Consulta</h2>
-
-                <h3>Selecione a data </h3>
-
-                <div class="politica">
-                    <p>abaixo você pode encontrar uma lista de horários disponíveis para Dra. Fátima. clique em um horário para prosseguir com a reserva</p>
-                </div>
-
-                <div class="selecionar">
-                    <label for="date">Selecionar data</label>
-                    <input class="input" type="date">
-
-                    <label for="hora">Selecionar horário</label>
-                    <input class="input" type="time">
-                </div>
-
-                <div class="botoes">
-                    <div class="btn-branco voltarData">
-                        <a href="#">Voltar</a>
-                    </div>
-
-                    <div class="btn-verde proximoData">
-                        <a href="#">Proximo</a>
-                    </div>
-                </div>
+        <section class="como-funciona">
+            <div class="comoFunciona-content">
+                <h1>Veja como funciona!</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet accusantium
+                    </br>consectetur aliquam labore dolorum iure porro nisi quos, numquam non.
+                    </br>Aspernatur facilis quae perferendis doloribus autem itaque consequuntur sequi repellendus.
+                </p>
             </div>
+
+            <div class="passos">
+                <div class="passo">
+                    <div class="icon-passo">
+                        <i class="ph ph-stethoscope"></i>
+                    </div>
+
+                    <div>
+                        <h3>Escolha o Doutor</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam accusamus recusandae.</p>
+                    </div>
+                </div>
+
+                <div class="passo">
+                    <div class="icon-passo">
+                        <i class="ph ph-asclepius"></i>
+                    </div>
+
+                    <div>
+                        <h3>Escolha a Especialidade</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam accusamus recusandae.</p>
+                    </div>
+                </div>
+
+                <div class="passo">
+                    <div class="icon-passo">
+                        <i class="ph ph-calendar"></i>
+                    </div>
+
+                    <div>
+                        <h3>Escolha o Dia</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam accusamus recusandae.</p>
+                    </div>
+                </div>
+
+            </div>
+
+
         </section>
     </main>
 
-
-
-    <!--Datalhes - ETAPA 3-->
-
-    <main class="main-container  detalhes">
-        <section class="especialista">
-            <div class="container-agendar">
-                <h2>Agendar Consulta</h2>
-
-                <h3>Detalhes</h3>
-
-                <div class="politica">
-                    <p>Você selecionou o agendatamento para [especilidade] com a [nome do doutor]no [dia], no horário [horário], preecha o formulário para continuar com o agendamento</p>
-                </div>
-
-                <div class="selecionar">
-                    <label for="nome">Nome completo</label>
-                    <input class="input" type="text" name="nome" placeholder="seu nome completo">
-
-                    <label for="numero">Telefone para contato</label>
-                    <input class="input" type="number" name="numero" placeholder="Ex: 21966154418">
-
-                    <label for="email">Telefone para contato</label>
-                    <input class="input" type="email" name="email" placeholder="Ex: seuemail@seuemail.com.br">
-                </div>
-
-                <div class="botoes">
-                    <div class="btn-branco voltarDetalhe">
-                        <a href="#">Voltar</a>
-                    </div>
-
-                    <div class="btn-verde proximoDetalhe">
-                        <a href="#">Proximo</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-
-    <!--AGENDAMENTO CONFIRMADO - ETAPA 4-->
-
-
-    <main class="main-container  confirmarAgendamento">
-        <section class="especialista">
-            <div class="container-agendar">
-
-                <h1>Agendamento Confirmado! <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#4ec20f">
-                        <path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
-                    </svg></h1>
-
-                <div class="politica">
-                    <p>Você selecionou o agendatamento para [especilidade] com a [nome do doutor]no [dia], no horário [horário], preecha o formulário para continuar com o agendamento</p>
-                </div>
-
-                <div class="selecionar">
-                    <label for="nome">Nome completo</label>
-                    <input type="text" name="nome" placeholder="seu nome completo">
-
-                    <label for="numero">Telefone para contato</label>
-                    <input type="number" name="numero" placeholder="Ex: 21966154418">
-
-                    <label for="email">Telefone para contato</label>
-                    <input type="email" name="email" placeholder="Ex: seuemail@seuemail.com.br">
-                </div>
-
-                <div class="botoes">
-                    <div class="btn-verde inicio">
-                        <a href="#">Voltar para o inicio</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-
-    <!--Script-->
-    <script src="./js/index.js"></script>
+    <!--Script ICON-->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
 </body>
 

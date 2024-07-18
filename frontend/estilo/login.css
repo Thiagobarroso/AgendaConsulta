@@ -1,34 +1,26 @@
-.container-login {
+body {
+    overflow-y: hidden;
+}
+
+.login {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/frontend/assets/imagens/login-back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+
     display: flex;
-    height: 80vh;
     justify-content: center;
     align-items: center;
 }
 
-
-.login {
-    width: max-content;
-    height: 300px;
+.login-content {
     background-color: white;
-    padding: 25px 20px;
-    border-radius: 5px;
+    padding: 50px;
 }
 
-#loginForm {
+.login div {
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 
-#loginForm button {
-    border: none;
-    border-radius: 4px;
-    color: white;
-    background-color: #157347;
-    cursor: pointer;
-    font-size: 18px;
-}
-
-#loginForm button:hover{
-   background-color: #146c43
-}
