@@ -1,11 +1,17 @@
 const mongoose = require('mongoose');
 
-const Medico = mongoose.model('Medico', {
+const medicoSchema = new mongoose.Schema({
   especialidade_id: {
-    type: mongoose.Types.ObjectId,
+    type: mongoose.Schema.Types.ObjectId,
     ref: 'Especialidade',
+    require: true,
   },
-  nome: String,
+  nome: {
+    type: String,
+    require: true,
+  },
 });
+
+const Medico = mongoose.model('Medico', medicoSchema);
 
 module.exports = Medico;
