@@ -42,12 +42,37 @@ document.addEventListener('DOMContentLoaded', async function () {
     data.forEach((especialidade) => {
       const li = document.createElement('li');
       li.innerHTML = `
-      <strong>${especialidade.nome}</strong> - ${especialidade._id}
-      <button onclick="alert('Botão clicado!')">Remover</button>
+      <strong>${especialidade.nome}</strong>
+      <button class="removerBtn btn-remove" >Remover</button>
+      <hr>
   `;
       especialidadesList.appendChild(li);
+
+      // Adicionar event listener para cada botão de remover
+      const removerBtn = li.querySelector('.removerBtn');
+      removerBtn.addEventListener('click', async () => {
+        try {
+          const response = await fetch(
+            `http://localhost:3000/especialidade/${especialidade._id}`,
+            {
+              method: 'DELETE',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+            },
+          );
+
+          const responseData = await response.json();
+          console.log(responseData);
+          li.remove();
+          window.location.reload();
+        } catch (error) {
+          console.error('Erro ao excluir especialidade:', error.message);
+          alert(`Erro ao excluir especialidade: ${error.message}`);
+        }
+      });
     });
   } catch (error) {
-    console.error('Deu ruim');
+    console.error('Erro');
   }
 });

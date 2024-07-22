@@ -35,4 +35,14 @@ a {
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-remove {
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
 }
