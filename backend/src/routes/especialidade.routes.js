@@ -1,49 +1,74 @@
 const express = require('express');
 const router = express.Router();
-const Especialidade = require('../models/especialidade');
+const Especialidade = require('../models/especialidade'); // Importe o modelo de especialidade adequado
 
-//RECUPERAR TODOS OS REGISTROS
-router.get('/', (req, res) => {
-  res.json({ mensagem: 'PEGAR TODOS OS REGISTROS' });
-});
-
-//RECUPERAR TODOS OS REGISTROS COM ID
-router.get('/:id', (req, res) => {
-  const id = req.params.id;
-  res.json({ mensagem: `PEGAR TODOS OS REGISTROS COM ID ${id}` });
-});
-
-// CRIAR REGISTRO
-router.post('/', async (req, res) => {
+// Rota para criar uma nova especialidade
+router.post('/especialidade', async (req, res) => {
   try {
-    const especialidade = req.body;
-    const response = await new Especialidade(especialidade).save();
-    res.json({ error: false, especialidade: response });
+    const { nome } = req.body;
+
+    if (!nome) {
+      return res.status(400).json({
+        error: true,
+        message: 'O nome da especialidade é obrigatório',
+      });
+    }
+
+    const novaEspecialidade = new Especialidade({ nome });
+
+    const especialidadeSalva = await novaEspecialidade.save();
+
+    res.json({
+      error: false,
+      message: 'Especialidade criada com sucesso',
+      especialidade: especialidadeSalva,
+    });
   } catch (err) {
-    res.json({ error: true, massage: err.message });
+    res.status(500).json({ error: true, message: err.message });
   }
 });
 
-//ATUALIZAR REGISTRO
-router.put('/especialidade', async (req, res) => {
+// Rota para buscar todas as especialidades
+router.get('/especialidades', async (req, res) => {
   try {
-    const id = req.params.id;
-    const novaEspecialidade = req.body;
-
-    const especialidade = await Especialidade.findByIdAndUpdate(
-      id,
-      novaEspecialidade,
-    );
-    res.json({ error: true, message: err.mensagem });
+    const especialidades = await Especialidade.find({}, 'nome');
+    res.json(especialidades);
   } catch (err) {
-    res.json({ error: true, mensage: err.mensage });
+    res.status(500).json({ error: true, message: err.message });
   }
 });
 
-//DELETAR REGISTRO
-router.delete('/:id', (req, res) => {
-  const id = req.params.id;
-  res.json({ mensagem: `ATUALIZAR SOMENTE O REGISTRO COM O ID: ${id}` });
+// Rota para remover uma especialidade pelo ID
+router.delete('/especialidade/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    // Verifica se o ID fornecido é válido
+    if (!id) {
+      return res.status(400).json({
+        error: true,
+        message: 'ID da especialidade não fornecido',
+      });
+    }
+
+    // Procura e remove a especialidade pelo ID
+    const especialidadeRemovida = await Especialidade.findByIdAndDelete(id);
+
+    if (!especialidadeRemovida) {
+      return res.status(404).json({
+        error: true,
+        message: 'Especialidade não encontrada',
+      });
+    }
+
+    res.json({
+      error: false,
+      message: 'Especialidade removida com sucesso',
+      especialidade: especialidadeRemovida,
+    });
+  } catch (err) {
+    res.status(500).json({ error: true, message: err.message });
+  }
 });
 
 module.exports = router;

@@ -118,27 +118,31 @@
 }
 
 .icon-passo {
+    display: inline-block;
     margin-bottom: 30px;
-    position: relative;
+    position: relative; 
 }
 
 .icon-passo::before {
     content: '1';
     background-color: var(--azul-principal);
     color: white;
-    top: -1.25rem;
-    right: 11.56rem;
     width: 1.25rem;
     height: 1.25rem;
     border-radius: 50%;
     position: absolute;
+    top: -1.25rem; 
+    right: -0.5rem; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
 }
 
-.icon-passo i{
+.icon-passo i {
     font-size: 50px;
     padding: 5px;
     border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
     border: 1px solid transparent;
 }
+
+
 
